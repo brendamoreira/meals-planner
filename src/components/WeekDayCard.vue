@@ -16,6 +16,16 @@ export default {
 }
 </script>
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+h4{
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: 100;
+    font-size: 1.2rem;
+    margin: 0;
+    text-decoration: underline solid rgba(0, 0, 0, 0.523);
+}
 ul {
     display: flex;
     flex-wrap: wrap;
@@ -28,5 +38,9 @@ li {
     margin: 20px;
     list-style: none;
     border: 4px double tomato;
+}
+p{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
 }
 </style>

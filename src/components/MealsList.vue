@@ -32,12 +32,17 @@ export default {
 }
 </script>
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+
 .sidebar {
     width: 30%;
     text-align: center;
     border-right: 3px dashed tomato;
+    font-family: 'Josefin Sans', sans-serif;
 }
 h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem;
     text-decoration: underline wavy tomato;
 }
 ul {
