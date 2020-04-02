@@ -1,20 +1,31 @@
 <template>
   <div id="app">
-    <meals-list :meals="meals"/>
+    <meals-list :meals="meals" @delete="removeItem"/>
+    <week-day-card/>
+    <button class="sort"> Sort! </button>
   </div>
 </template>
 
 <script>
 import MealsList from "./components/MealsList.vue"
+import WeekDayCard from"./components/WeekDayCard.vue"
 
 export default {
   name: 'App',
   components:{
-    MealsList
+    MealsList,
+    WeekDayCard
   },
   data() {
     return{
-      meals: ['pizza', 'lasanha', 'macarrão']
+      meals: ['Pizza', 'Lasanha', 'Macarrão', 'Batata', 'Pipoca']
+    }
+  },
+  methods:{
+    removeItem(name){
+      this.meals = this.meals.filter(function(meal){
+        return meal != name;
+      }, 1);
     }
   }
 }
@@ -33,5 +44,11 @@ html, body {
 #app {
   width: 100vw;
   height: 100vh;
+  display: flex;
+}
+.sort {
+  position: absolute;
+  bottom: 15px;
+  right: 30px;
 }
 </style>
