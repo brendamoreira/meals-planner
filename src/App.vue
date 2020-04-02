@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <meals-list :meals="meals" @delete="removeItem" @addMeal="addMeal"/>
-    <week-day-card/>
-    <button class="sort"> Sort! </button>
+    <week-day-card :days="days"/>
+    <button class="sort" @click="sortMeal"> Sort! </button>
   </div>
 </template>
 
@@ -18,7 +18,8 @@ export default {
   },
   data() {
     return{
-      meals: ['Pizza', 'Lasanha', 'Macarrão', 'Batata', 'Pipoca']
+      meals: ['Pizza', 'Lasanha', 'Macarrão', 'Batata', 'Pipoca'],
+      days: [{name:'Monday', meal: ''}, {name:'Tuesday', meal: ''}, {name: 'Wednesday', meal:''}, {name: 'Thursday', meal: ''}, {name: 'Friday', meal: ''}, {name: 'Saturday', meal:''}, {name:'Sunday', meal:''}],
     }
   },
   methods:{
@@ -32,8 +33,11 @@ export default {
         this.meals.push(newMeal)
       } else{
         alert('This meal already exists')
-      }
-      
+      } 
+    },
+    sortMeal(){
+      this.days.forEach(day => { day.meal = this.meals[Math.floor(Math.random()*this.meals.length)]  
+      });
     }
   }
 }

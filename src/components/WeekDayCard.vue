@@ -1,19 +1,17 @@
 <template>
     <div>
         <ul>
-            <li v-for="day in days" :key="day">
-                {{day}}
+            <li v-for="day in days" :key="day.name">
+                <h4>{{ day.name }}</h4> 
+                <p>{{ day.meal }}</p>
             </li>
         </ul>
     </div>
 </template>
 <script>
 export default {
-    data(){
-        return{
-            days:['Monday','Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-        }
-    }
+    name: 'WeekDayCard',
+    props: ['days'],
     
 }
 </script>
