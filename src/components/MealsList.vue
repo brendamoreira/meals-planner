@@ -4,7 +4,8 @@
         <ul>
         <meal-list-item v-for="meal in meals" :key="meal" :meal="meal" @delete="$emit('delete', meal)"/>
         </ul>
-        <button class="bottom">Add meal + </button>
+        <input v-model="newMeal" class="new-meal" placeholder="New Meal">
+        <button class="bottom" @click="emitNewMeal">Add meal + </button>
     </aside>
 </template>
 <script>
@@ -15,6 +16,19 @@ export default {
     components: {
         MealListItem
     },
+    data(){
+        return{
+            newMeal: '',
+        }
+    },
+    methods: {
+        emitNewMeal(){
+            if(this.newMeal.trim() !== ''){
+                this.$emit('addMeal', this.newMeal);
+                this.newMeal= '';
+            }
+        }
+    }
 }
 </script>
 <style scoped>
@@ -32,5 +46,8 @@ ul {
 .bottom {
   position: relative;
   align-content: center;
+}
+.new-meal {
+    text-align: center;
 }
 </style>

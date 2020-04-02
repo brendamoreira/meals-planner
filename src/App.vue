@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <meals-list :meals="meals" @delete="removeItem"/>
+    <meals-list :meals="meals" @delete="removeItem" @addMeal="addMeal"/>
     <week-day-card/>
     <button class="sort"> Sort! </button>
   </div>
@@ -26,6 +26,14 @@ export default {
       this.meals = this.meals.filter(function(meal){
         return meal != name;
       }, 1);
+    },
+    addMeal(newMeal){
+      if(!this.meals.map(m => m.toLowerCase()).includes(newMeal.toLowerCase())){
+        this.meals.push(newMeal)
+      } else{
+        alert('This meal already exists')
+      }
+      
     }
   }
 }
