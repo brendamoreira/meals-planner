@@ -14,4 +14,10 @@ li {
     list-style: none;
     margin: 10px;
 }
+
+button {
+    color:tomato;
+    border-color: rgba(255, 99, 71, 0.427);
+    border-radius: 3px;
+}
 </style>

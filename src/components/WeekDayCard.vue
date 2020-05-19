@@ -17,7 +17,7 @@ export default {
 </script>
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=swap');
 
 h4{
     font-family: 'Fredericka the Great', cursive;
@@ -39,8 +39,8 @@ li {
     list-style: none;
     border: 4px double tomato;
 }
-p{
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.2rem;
+p {
+    font-family: 'Clicker Script', cursive;
+    font-size: 1.3rem;
 }
 </style>

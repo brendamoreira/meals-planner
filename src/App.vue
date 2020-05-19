@@ -60,7 +60,10 @@ html, body {
 }
 .sort {
   position: absolute;
-  bottom: 15px;
-  right: 30px;
+  bottom: 50px;
+  right: 100px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: tomato;
+  padding: 4px 10px;
 }
 </style>

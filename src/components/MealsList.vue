@@ -48,11 +48,22 @@ h2 {
 ul {
     padding: 0;
 }
+
 .bottom {
-  position: relative;
-  align-content: center;
+    font-family: 'Josefin Sans', sans-serif;
+    position: relative;
+    align-content: center;
+    color: tomato;
+    padding: 3px 8px;
 }
+
 .new-meal {
+    font-family: 'Josefin Sans', sans-serif;
+    width: 150px;
     text-align: center;
+    margin: 5px 5px 10px 5px;
+    padding: 3px;
+    border: 0.5px solid rgb(255, 99, 71);
+    border-radius: 3px;
 }
 </style>
