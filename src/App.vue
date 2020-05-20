@@ -66,4 +66,13 @@ html, body {
   color: tomato;
   padding: 4px 10px;
 }
+button:hover {
+  background-color: rgb(255, 246, 246);
+  border-radius: 4px;
+  outline: none;
+}
+button:active{
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 </style>

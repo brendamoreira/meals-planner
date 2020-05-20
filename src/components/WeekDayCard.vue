@@ -42,5 +42,6 @@ li {
 p {
     font-family: 'Clicker Script', cursive;
     font-size: 1.3rem;
+    color: tomato;
 }
 </style>

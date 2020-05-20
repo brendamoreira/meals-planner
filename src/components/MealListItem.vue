@@ -16,8 +16,9 @@ li {
 }
 
 button {
+    background-color: white;
     color:tomato;
     border-color: rgba(255, 99, 71, 0.427);
-    border-radius: 3px;
+    border-radius: 4px;
 }
 </style>

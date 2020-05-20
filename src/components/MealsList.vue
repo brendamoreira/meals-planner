@@ -66,4 +66,7 @@ ul {
     border: 0.5px solid rgb(255, 99, 71);
     border-radius: 3px;
 }
+.new-meal:focus{
+    outline: rgba(255, 99, 71, 0.673) solid 2px;
+}
 </style>
